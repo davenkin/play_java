@@ -18,7 +18,7 @@ public class Board {
         return cards;
     }
 
-    public void setCards(ArrayList<Card> cards) {
+    private void setCards(ArrayList<Card> cards) {
         this.cards = cards;
     }
 
@@ -26,11 +26,18 @@ public class Board {
     {
         cards.add(card);
     }
-    
-    public Card findLastByRank(Rank rank)
+
+    public void removeAllFrom(int from)
     {
-        ListIterator<Card> iterator = cards.listIterator();
-        if(iterator.hasNext())
+        ArrayList<Card> newCards = new ArrayList<Card>();
+        newCards.addAll(cards.subList(0,from));
+        setCards(newCards);
+    }
+    
+    public Card findFirstByRank(Rank rank)
+    {
+
+        for(ListIterator<Card> iterator = cards.listIterator();iterator.hasNext();)
         {
             Card currentCard = iterator.next();
             if(currentCard.getRank() == rank)

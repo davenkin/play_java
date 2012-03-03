@@ -192,10 +192,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FishingGame.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FishingGame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/FishingGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="40" selection-start="1769" selection-end="1769" vertical-scroll-proportion="0.33227345">
+            <state line="28" column="22" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeckTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/thoughtworks/davenkin/poker/DeckTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="26" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -232,19 +241,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Rank.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/Rank.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="12" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PokerGame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/PokerGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="14" selection-start="721" selection-end="721" vertical-scroll-proportion="0.0">
+            <state line="24" column="54" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -255,10 +255,11 @@
       <file leaf-file-name="Board.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="35" selection-start="843" selection-end="843" vertical-scroll-proportion="0.0">
+            <state line="14" column="58" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#323#329#0" expanded="true" />
+                <element signature="e#656#662#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -267,7 +268,7 @@
       <file leaf-file-name="FishingGameTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/thoughtworks/davenkin/poker/FishingGameTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="36" selection-start="1123" selection-end="1419" vertical-scroll-proportion="0.0">
+            <state line="32" column="20" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -275,10 +276,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="App.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="22" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0">
+            <state line="17" column="25" selection-start="416" selection-end="433" vertical-scroll-proportion="0.43664384">
               <folding />
             </state>
           </provider>
@@ -287,7 +288,7 @@
       <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="40" selection-start="920" selection-end="920" vertical-scroll-proportion="0.0">
+            <state line="58" column="47" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#318#324#0" expanded="true" />
@@ -328,10 +329,10 @@
         <option value="$PROJECT_DIR$/src/test/java/com/thoughtworks/davenkin/poker/PlayerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/thoughtworks/davenkin/poker/FishingGameTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/Player.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/Board.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/FishingGame.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/PokerGame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/FishingGame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/Board.java" />
       </list>
     </option>
   </component>
@@ -871,10 +872,10 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890856" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15740016" sideWeight="0.32890856" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1635476" sideWeight="0.16793893" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980423" sideWeight="0.32890856" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.67109144" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2595606" sideWeight="0.16793893" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.83206105" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Aspects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1007,15 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/thoughtworks/davenkin/poker/DeckTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="1152" selection-end="1315" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/Deck.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="25" selection-start="974" selection-end="974" vertical-scroll-proportion="0.0">
@@ -1058,55 +1050,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/thoughtworks/davenkin/poker/FishingGameTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="36" selection-start="1123" selection-end="1419" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="40" selection-start="920" selection-end="920" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#318#324#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="35" selection-start="843" selection-end="843" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#323#329#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/CardDealer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="21" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="22" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/PokerGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="14" selection-start="721" selection-end="721" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1117,12 +1064,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/FishingGame.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/thoughtworks/davenkin/poker/DeckTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="40" selection-start="1769" selection-end="1769" vertical-scroll-proportion="0.33227345">
+        <state line="43" column="26" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/thoughtworks/davenkin/poker/FishingGameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="20" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="47" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#318#324#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/PokerGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="54" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/FishingGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="22" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="58" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#323#329#0" expanded="true" />
+            <element signature="e#656#662#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/thoughtworks/davenkin/poker/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="25" selection-start="416" selection-end="433" vertical-scroll-proportion="0.43664384">
+          <folding />
         </state>
       </provider>
     </entry>

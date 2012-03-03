@@ -51,4 +51,11 @@ public class Player {
     public String getName() {
         return name;
     }
+    
+    public void displayCards()
+    {
+        System.out.println("Cards for " + name + ":");
+        for(Card card : myCards)
+           System.out.println(card.toString());
+    }
 }

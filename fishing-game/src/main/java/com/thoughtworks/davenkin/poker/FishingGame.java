@@ -1,9 +1,6 @@
 package com.thoughtworks.davenkin.poker;
 
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 
 /**
  * Created by IntelliJ IDEA.
@@ -33,7 +30,6 @@ public class FishingGame extends PokerGame {
     }
 
     public void start() {
-        initPlayerIterator();
         int count = 0;
         while (true) {
             count ++;
@@ -47,17 +43,25 @@ public class FishingGame extends PokerGame {
             if (cardToPlay.getRank() == Rank.JACK && board.getCards().size() != 1) {
                 currentPlayer.addCards(board.getCards());
                 board.getCards().clear();
-//            } else {
-//                Card lastByRank = board.findLastByRank(cardToPlay.getRank());
-//                if (lastByRank != null && lastByRank != cardToPlay) {
-//                    int from = board.getCards().indexOf(lastByRank);
-//                    int to = board.getCards().indexOf(cardToPlay);
-//                    List<Card> cardsInBetween = board.getCards().subList(from, to);
-//                    board.getCards().removeAll(cardsInBetween);
-//                    currentPlayer.addCards(cardsInBetween);
-//
-//
-//                }
+            } else {
+                Card firstByRank = board.findFirstByRank(cardToPlay.getRank());
+                if (firstByRank != null && firstByRank != cardToPlay) {
+                    System.out.println("first card: " + firstByRank.toString());
+                    int from = board.getCards().indexOf(firstByRank);
+                    int to = board.getCards().indexOf(cardToPlay);
+                     System.out.println(from);
+                    System.out.println(to);
+                    List<Card> cardsInBetween = board.getCards().subList(from, to+1);
+                    System.out.println(cardsInBetween.size());
+                    board.removeAllFrom(from);
+                    currentPlayer.addCards(cardsInBetween);
+                    currentPlayer.displayCards();
+                    
+                    System.out.println("something in between:");
+                    board.displayCards();
+
+
+                }
             }
 
 
