@@ -38,6 +38,7 @@ public class Player {
     public boolean playCard(Card card) {
         if (myCards.contains(card)) {
             myCards.remove(card);
+            System.out.println(name + " played: " + card.toString());
             return true;
         }
         return false;

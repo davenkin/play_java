@@ -1,6 +1,7 @@
 package com.thoughtworks.davenkin.poker;
 
 import java.util.ArrayList;
+import java.util.ListIterator;
 
 /**
  * Created by IntelliJ IDEA.
@@ -24,5 +25,27 @@ public class Board {
     public void addCard(Card card)
     {
         cards.add(card);
+    }
+    
+    public Card findLastByRank(Rank rank)
+    {
+        ListIterator<Card> iterator = cards.listIterator();
+        if(iterator.hasNext())
+        {
+            Card currentCard = iterator.next();
+            if(currentCard.getRank() == rank)
+                return currentCard;
+        }
+        return null;
+    }
+    
+    public void displayCards()
+    {
+        System.out.println("The board currently contains:");
+
+        for(Card card : cards)
+        {
+            System.out.println(card.toString());
+        }
     }
 }

@@ -37,6 +37,23 @@ public class FishingGameTest extends TestCase {
 
     }
 
+    public void testNextPlayer()
+    {
+        Player player1 = new Player("Player1");
+        Player player2 = new Player("Player2");
+        Deck deck = new Deck();
+        FishingGame game = new FishingGame();
+        game.setDeck(deck);
+        game.addPlayer(player1);
+        game.addPlayer(player2);
+        game.initPlayerIterator();
+        assertEquals(player1, game.nextPlayer());
+        assertEquals(player2, game.nextPlayer());
+        assertEquals(player1,game.nextPlayer());
+
+
+    }
+
     private void displayPlayerCards(Player player) {
         System.out.println("card for" + player.getName());
         for(Card card : player.getCards())

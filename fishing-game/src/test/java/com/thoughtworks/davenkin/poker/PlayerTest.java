@@ -37,4 +37,15 @@ public class PlayerTest extends TestCase {
         assertFalse(player.getCards().contains(card));
     }
 
+    public void testPlayCard()
+    {
+        Deck deck = new Deck();
+        Card card = deck.getCards().get(0);
+        Player player = new Player("PlayerName");
+        player.addCards(deck.getCards());
+        assertTrue(player.playCard(card));
+        assertEquals(53, player.getCards().size());
+        assertFalse(player.getCards().contains(card));
+    }
+
 }
