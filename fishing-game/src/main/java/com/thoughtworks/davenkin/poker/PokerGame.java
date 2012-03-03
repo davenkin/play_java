@@ -16,7 +16,6 @@ public abstract class PokerGame  implements CardDealer,RoleChecker {
     protected Deck deck;
 
     protected Board board = new Board();
-    ListIterator<Player> playerIterator;
 
     public void setDeck(Deck deck) {
         this.deck = deck;
@@ -28,7 +27,4 @@ public abstract class PokerGame  implements CardDealer,RoleChecker {
 
     public abstract void start();
 
-    protected void initPlayerIterator() {
-        playerIterator = players.listIterator();
-    }
 }

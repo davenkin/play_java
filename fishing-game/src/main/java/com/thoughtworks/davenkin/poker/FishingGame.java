@@ -1,6 +1,7 @@
 package com.thoughtworks.davenkin.poker;
 
 import java.util.List;
+import java.util.ListIterator;
 
 /**
  * Created by IntelliJ IDEA.
@@ -10,6 +11,8 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class FishingGame extends PokerGame {
+
+    private ListIterator<Player> playerIterator;
 
     public void dealCards() {
         deck.shuffle();
@@ -30,51 +33,62 @@ public class FishingGame extends PokerGame {
     }
 
     public void start() {
+        initPlayerIterator();
         int count = 0;
         while (true) {
-            count ++;
+            count++;
             Player currentPlayer = nextPlayer();
             Card cardToPlay = currentPlayer.getCards().get(0);
-            currentPlayer.playCard(cardToPlay);
-            board.addCard(cardToPlay);
-            board.displayCards();
-
-
-            if (cardToPlay.getRank() == Rank.JACK && board.getCards().size() != 1) {
-                currentPlayer.addCards(board.getCards());
-                board.getCards().clear();
-            } else {
-                Card firstByRank = board.findFirstByRank(cardToPlay.getRank());
-                if (firstByRank != null && firstByRank != cardToPlay) {
-                    System.out.println("first card: " + firstByRank.toString());
-                    int from = board.getCards().indexOf(firstByRank);
-                    int to = board.getCards().indexOf(cardToPlay);
-                     System.out.println(from);
-                    System.out.println(to);
-                    List<Card> cardsInBetween = board.getCards().subList(from, to+1);
-                    System.out.println(cardsInBetween.size());
-                    board.removeAllFrom(from);
-                    currentPlayer.addCards(cardsInBetween);
-                    currentPlayer.displayCards();
-                    
-                    System.out.println("something in between:");
-                    board.displayCards();
-
-
-                }
-            }
-
-
-            if (currentPlayer.getCards().size() == 0)
-                players.remove(currentPlayer);
-
-            if (players.size() == 1) {
-                System.out.println("Winner: " + players.get(0).getName());
-                break;
-            }
+            play(currentPlayer, cardToPlay);
+            fish(currentPlayer, cardToPlay);
+            if (resolveWinner(currentPlayer)) break;
         }
         System.out.println("Totally " + count + " rounds");
     }
 
+    private void play(Player currentPlayer, Card cardToPlay) {
+        currentPlayer.playCard(cardToPlay);
+        board.addCard(cardToPlay);
+        board.displayCards();
+    }
 
+    private void fish(Player currentPlayer, Card cardToPlay) {
+        if (cardToPlay.getRank() == Rank.JACK && board.getCards().size() != 1) {
+            fishByJack(currentPlayer);
+        } else {
+            Card firstByRank = board.findFirstByRank(cardToPlay.getRank());
+            if (firstByRank != null && firstByRank != cardToPlay) {
+                fishByReoccurence(currentPlayer, cardToPlay, firstByRank);
+            }
+        }
+    }
+
+    private boolean resolveWinner(Player currentPlayer) {
+        if (currentPlayer.getCards().size() == 0)
+            players.remove(currentPlayer);
+
+        if (players.size() == 1) {
+            System.out.println("Winner: " + players.get(0).getName());
+            return true;
+        }
+        return false;
+    }
+
+    private void fishByReoccurence(Player currentPlayer, Card cardToPlay, Card firstByRank) {
+        int from = board.getCards().indexOf(firstByRank);
+        int to = board.getCards().indexOf(cardToPlay);
+        List<Card> cardsInBetween = board.getCards().subList(from, to + 1);
+        board.removeAllFrom(from);
+        currentPlayer.addCards(cardsInBetween);
+    }
+
+    private void fishByJack(Player currentPlayer) {
+        currentPlayer.addCards(board.getCards());
+        board.getCards().clear();
+    }
+
+
+    public void initPlayerIterator() {
+        playerIterator = players.listIterator();
+    }
 }

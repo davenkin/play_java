@@ -16,7 +16,6 @@ public class App
         game.addPlayer(player1);
         game.addPlayer(player2);
         game.dealCards();
-        game.initPlayerIterator();
         game.start();
     }
 }
