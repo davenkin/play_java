@@ -30,6 +30,7 @@ public class Deck {
 
         cards.add(new Card(Suit.SPADE, Rank.JOKER));
         cards.add(new Card(Suit.HEART, Rank.JOKER));
+
     }
 
     public int getCardsNumber() {
@@ -39,19 +40,16 @@ public class Deck {
     public void shuffle() {
         Collections.shuffle(cards);
     }
-    
-    public Card findBySuitAndRank(Suit suit, Rank rank)
-    {
-        for(Card card : cards)
-        {
-            if(card.getRank() == rank && card.getSuit() == suit)
-               return card;
+
+    public Card findBySuitAndRank(Suit suit, Rank rank) {
+        for (Card card : cards) {
+            if (card.getRank() == rank && card.getSuit() == suit)
+                return card;
         }
         return null;
     }
 
-    public ArrayList<Card> getCards()
-    {
+    public ArrayList<Card> getCards() {
         return cards;
     }
 
