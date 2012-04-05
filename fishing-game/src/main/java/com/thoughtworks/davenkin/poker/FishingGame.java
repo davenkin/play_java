@@ -1,5 +1,6 @@
 package com.thoughtworks.davenkin.poker;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -13,6 +14,7 @@ import java.util.ListIterator;
 public class FishingGame extends PokerGame {
 
     private ListIterator<Player> playerIterator;
+    private ArrayList<Player> failedPlayers = new ArrayList<Player>();
 
     public void dealCards() {
         deck.shuffle();
@@ -25,6 +27,18 @@ public class FishingGame extends PokerGame {
         }
     }
 
+    public void reset() {
+        for (Player player : players) {
+            player.getCards().clear();
+        }
+
+        board.getCards().clear();
+        players.addAll(failedPlayers);
+        failedPlayers.clear();
+
+        dealCards();
+    }
+
     public Player nextPlayer() {
         if (!playerIterator.hasNext())
             initPlayerIterator();
@@ -32,21 +46,21 @@ public class FishingGame extends PokerGame {
 
     }
 
-    public void start() {
+    public int start() {
         initPlayerIterator();
         int count = 0;
         while (true) {
             count++;
             Player currentPlayer = nextPlayer();
             Card cardToPlay = currentPlayer.getCards().get(0);
-            play(currentPlayer, cardToPlay);
+            playCards(currentPlayer, cardToPlay);
             fish(currentPlayer, cardToPlay);
             if (resolveWinner(currentPlayer)) break;
         }
-        System.out.println("Totally " + count + " rounds");
+        return count;
     }
 
-    private void play(Player currentPlayer, Card cardToPlay) {
+    private void playCards(Player currentPlayer, Card cardToPlay) {
         currentPlayer.playCard(cardToPlay);
         board.addCard(cardToPlay);
         board.displayCards();
@@ -58,15 +72,16 @@ public class FishingGame extends PokerGame {
         } else {
             Card firstByRank = board.findFirstByRank(cardToPlay.getRank());
             if (firstByRank != null && firstByRank != cardToPlay) {
-                fishByReoccurence(currentPlayer, cardToPlay, firstByRank);
+                fishByRepeat(currentPlayer, cardToPlay, firstByRank);
             }
         }
     }
 
     private boolean resolveWinner(Player currentPlayer) {
-        if (currentPlayer.getCards().size() == 0)
+        if (currentPlayer.getCards().size() == 0) {
             players.remove(currentPlayer);
-
+            failedPlayers.add(currentPlayer);
+        }
         if (players.size() == 1) {
             System.out.println("Winner: " + players.get(0).getName());
             return true;
@@ -74,7 +89,7 @@ public class FishingGame extends PokerGame {
         return false;
     }
 
-    private void fishByReoccurence(Player currentPlayer, Card cardToPlay, Card firstByRank) {
+    private void fishByRepeat(Player currentPlayer, Card cardToPlay, Card firstByRank) {
         int from = board.getCards().indexOf(firstByRank);
         int to = board.getCards().indexOf(cardToPlay);
         List<Card> cardsInBetween = board.getCards().subList(from, to + 1);

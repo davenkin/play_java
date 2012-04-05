@@ -1,5 +1,7 @@
 package com.thoughtworks.davenkin.poker;
 
+import java.util.ArrayList;
+
 /**
  * Hello world!
  *
@@ -15,7 +17,19 @@ public class App
         game.setDeck(deck);
         game.addPlayer(player1);
         game.addPlayer(player2);
-        game.dealCards();
-        game.start();
+        ArrayList<Integer> counts = new ArrayList<Integer>();
+        for(int i = 0; i<1000;i++)
+        {
+            game.reset();
+            counts.add(game.start());
+        }
+        int total= 0;
+        for(Integer number : counts)
+        {
+            total = total + number;
+            System.out.println(number);
+        }
+        System.out.println("average time: " + total/counts.size());
+        
     }
 }

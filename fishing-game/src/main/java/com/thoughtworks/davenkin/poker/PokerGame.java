@@ -25,6 +25,8 @@ public abstract class PokerGame  implements CardDealer,RoleChecker {
         players.add(player);
     }
 
-    public abstract void start();
+    public abstract int start();
+
+    public abstract void reset();
 
 }
