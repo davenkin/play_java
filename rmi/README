@@ -1,0 +1,5 @@
+(a) rmi only without jndi, the clien shares the stub with the server
+(1) run rmic on impl class
+(2) run rmiregistry under the root of the classpath of the server
+(3) run the server
+(4) run the client
