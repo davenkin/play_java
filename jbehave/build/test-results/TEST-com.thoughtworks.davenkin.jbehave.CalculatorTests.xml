@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite errors="0" failures="1" hostname="davenkin.local" name="com.thoughtworks.davenkin.jbehave.CalculatorTests" tests="1" time="0.747" timestamp="2012-04-07T11:05:37">
+<testsuite errors="0" failures="1" hostname="davenkin.local" name="com.thoughtworks.davenkin.jbehave.CalculatorTests" tests="1" time="1.03" timestamp="2012-04-09T04:55:33">
   <properties />
-  <testcase classname="com.thoughtworks.davenkin.jbehave.CalculatorTests" name="run" time="0.677">
-    <failure message="org.jbehave.core.io.StoryResourceNotFound: Story path &apos;com/thoughtworks/davenkin/jbehave/calculator_tests.story&apos; not found by class loader sun.misc.Launcher$AppClassLoader@558fe7c3" type="org.jbehave.core.io.StoryResourceNotFound">org.jbehave.core.io.StoryResourceNotFound: Story path &apos;com/thoughtworks/davenkin/jbehave/calculator_tests.story&apos; not found by class loader sun.misc.Launcher$AppClassLoader@558fe7c3
+  <testcase classname="com.thoughtworks.davenkin.jbehave.CalculatorTests" name="run" time="0.89">
+    <failure message="org.jbehave.core.io.StoryResourceNotFound: Story path &apos;com/thoughtworks/davenkin/jbehave/calculator_tests.story&apos; not found by class loader sun.misc.Launcher$AppClassLoader@53004901" type="org.jbehave.core.io.StoryResourceNotFound">org.jbehave.core.io.StoryResourceNotFound: Story path &apos;com/thoughtworks/davenkin/jbehave/calculator_tests.story&apos; not found by class loader sun.misc.Launcher$AppClassLoader@53004901
 	at org.jbehave.core.io.LoadFromClasspath.resourceAsStream(LoadFromClasspath.java:45)
 	at org.jbehave.core.io.LoadFromClasspath.loadResourceAsText(LoadFromClasspath.java:30)
 	at org.jbehave.core.io.LoadFromClasspath.loadStoryAsText(LoadFromClasspath.java:39)
