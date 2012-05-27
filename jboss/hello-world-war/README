@@ -1,0 +1,2 @@
+run deploy.sh
+cp hello-world.war to $JBOSS_HOME/server/default/deploy
