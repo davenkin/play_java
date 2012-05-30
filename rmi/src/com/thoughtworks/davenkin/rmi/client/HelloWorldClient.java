@@ -13,14 +13,14 @@ public class HelloWorldClient
 {
     public static void main(String[] args) throws NamingException, RemoteException
     {
-        if (System.getSecurityManager() == null)
-        {
-            System.setSecurityManager   (new RMISecurityManager());
-//            System.setSecurityManager (new RMISecurityManager() {
-//                public void checkConnect (String host, int port) {}
-//                public void checkConnect (String host, int port, Object context) {}
-//            });
-        }
+//        if (System.getSecurityManager() == null)
+//        {
+//            System.setSecurityManager   (new RMISecurityManager());
+////            System.setSecurityManager (new RMISecurityManager() {
+////                public void checkConnect (String host, int port) {}
+////                public void checkConnect (String host, int port, Object context) {}
+////            });
+//        }
 
         Hashtable env = new Hashtable();
         env.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.rmi.registry.RegistryContextFactory");
