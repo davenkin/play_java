@@ -1,3 +1,4 @@
+package com.thoughtworks.davenkin.ejb.stateless;
 import javax.ejb.*;
 import java.rmi.*;
 import javax.naming.*;

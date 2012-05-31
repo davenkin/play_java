@@ -4,7 +4,7 @@
 <web-app>
 <servlet>
         <servlet-name>greetServlet </servlet-name>
-        <servlet-class>greetServlet </servlet-class>
+        <servlet-class>com.thoughtworks.davenkin.ejb.stateless.greetServlet </servlet-class>
 </servlet>
 <servlet-mapping>
         <servlet-name>greetServlet</servlet-name>

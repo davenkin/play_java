@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
 <ejb-jar>
-        <enterprise-beans>]
+        <enterprise-beans>
            <session>
                 <ejb-name>greetBean</ejb-name>
-                <home>greetHome</home> 
-                <remote>greetRemote</remote>
-                <ejb-class>greetBean</ejb-class>
+                <home>com.thoughtworks.davenkin.ejb.stateless.greetHome</home> 
+                <remote>com.thoughtworks.davenkin.ejb.stateless.greetRemote</remote>
+                <ejb-class>com.thoughtworks.davenkin.ejb.stateless.greetBean</ejb-class>
                 <session-type>Stateless</session-type>
                 <transaction-type>Container </transaction-type>
            </session>

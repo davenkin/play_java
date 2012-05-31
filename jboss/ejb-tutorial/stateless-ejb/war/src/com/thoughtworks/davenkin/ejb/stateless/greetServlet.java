@@ -1,3 +1,4 @@
+package com.thoughtworks.davenkin.ejb.stateless;
 import java.net.*;
 import javax.ejb.*;
 import javax.rmi.*;
@@ -10,8 +11,7 @@ import javax.servlet.http.*;
 
 public class greetServlet extends HttpServlet
 {
-public void doPost
-(HttpServletRequest req, HttpServletResponse res)
+   public void doPost(HttpServletRequest req, HttpServletResponse res)
 throws ServletException,IOException
 {
 res.setContentType("text/html");
