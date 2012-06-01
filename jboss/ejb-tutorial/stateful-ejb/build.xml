@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<project name="Stateful EJB tutorial" basedir="." default="ear">
+
+    <property name="dist" value="./dist"/>
+    <property name="ejb" value="./ejb"/>
+    <property name="web" value="./web"/>
+    <property name="ear.file" value="ejb-stateful-cart.ear"/>
+    <property name="jboss-home" value="/Users/twer/software/jboss4/jboss-4.2.3.GA/"/>
+    <property name="deploy.dir" value="${jboss-home}/server/default/deploy/"/>
+
+    <target name="clean">
+        <ant dir="${ejb}" target="clean"/>
+        <ant dir="${web}" target="clean"/>
+    </target>
+
+    <target name="ear">
+        <ant dir="${ejb}" target="ejb"/>
+        <ant dir="${web}" target="war"/>
+        <ear destfile="${dist}/${ear.file}" appxml="application.xml">
+            <fileset dir="${ejb}/dist" includes="*.jar"/>
+            <fileset dir="${web}/dist" includes="*.war"/>
+        </ear>
+    </target>
+
+
+    <target name="deploy" depends="ear">
+        <copy todir="${deploy.dir}">
+            <fileset dir="${dist}" includes="*.ear"/>
+        </copy>
+    </target>
+
+
+</project>
+

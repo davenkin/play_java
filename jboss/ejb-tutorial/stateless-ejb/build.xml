@@ -10,8 +10,7 @@
 	<property name="ejb-build"   value="${ejb}/build" />
     <property name="war-classes"   value="${war}/WEB-INF/classes" />
 	<property name="version" value="0.1" />
-	<property name="jboss-home" value="/Users/twer/software/jboss-5.0.1.GA/" />
-	<property name="jboss-common-lib" value="${jboss-home}/common/lib" />
+	<property name="jboss-home" value="/Users/twer/software/jboss4/jboss-4.2.3.GA/" />
     <property name="jboss-client-lib" value="${jboss-home}/client" />
 	<property name="deploy-dir" value="${jboss-home}/server/default/deploy/" />
     <property name="ejb-jar-file" value="greet.jar" />
@@ -19,12 +18,10 @@
 	<property name="ear-file" value="ejb-stateless.ear" />
 	
 	<path id="ejb-build.classpath">
-		<fileset dir="${jboss-common-lib}" includes="**/*.jar" />
 		<fileset dir="${jboss-client-lib}" includes="**/*.jar" />
 	</path>
 
         <path id="war-build.classpath">
-                <fileset dir="${jboss-common-lib}" includes="**/*.jar" />
                 <fileset dir="${jboss-client-lib}" includes="**/*.jar" />
                 <dirset dir="${ejb-build}" />
         </path>

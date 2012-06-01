@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<project name="Stateful EJB tutorial" basedir="." default="ear">
+
+    <property name="dist" value="./dist"/>
+    <property name="src" value="./src"/>
+    <property name="conf" value="./conf"/>
+    <property name="build" value="./build"/>
+    <property name="jboss-home" value="/Users/twer/software/jboss4/jboss-4.2.3.GA/"/>
+    <property name="jboss-client-lib" value="${jboss-home}/client"/>
+    <property name="ejb-jar-file" value="cart.jar"/>
+
+    <path id="build.classpath">
+        <fileset dir="${jboss-client-lib}" includes="**/*.jar"/>
+    </path>
+
+    <target name="clean">
+        <delete dir="${dist}"/>
+        <delete dir="${build}"/>
+    </target>
+
+    <target name="init">
+        <tstamp/>
+        <mkdir dir="${dist}"/>
+        <mkdir dir="${build}"/>
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="${src}" destdir="${build}" optimize="on">
+            <classpath refid="build.classpath"/>
+        </javac>
+    </target>
+
+    <target name="ejb" depends="compile">
+        <jar destfile="${dist}/${ejb-jar-file}">
+            <fileset dir="${build}"/>
+            <fileset dir="${conf}"/>
+        </jar>
+    </target>
+
+
+</project>
+
