@@ -87,6 +87,9 @@
         <listener-class>
             com.thoughtworks.davenkin.servlet.listener.ExplorerServletContextListener
         </listener-class>
+        <!--<listener-class>-->
+            <!--com.thoughtworks.davenkin.servlet.domain.Person-->
+        <!--</listener-class>-->
         <listener-class>
             com.thoughtworks.davenkin.servlet.listener.ExplorerServletContextAttributeListener
         </listener-class>

@@ -1,5 +1,7 @@
 package com.thoughtworks.davenkin.servlet;
 
+import com.thoughtworks.davenkin.servlet.domain.Person;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -7,6 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.MalformedURLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ExplorerServlet extends HttpServlet
 {
@@ -14,7 +18,6 @@ public class ExplorerServlet extends HttpServlet
     {
         getServletContext().log("Starting to handle request for ExplorerServlet");
         generateOutput(request, response);
-
     }
 
     private void generateOutput(HttpServletRequest request, HttpServletResponse response) throws IOException
@@ -23,11 +26,33 @@ public class ExplorerServlet extends HttpServlet
 
         out.println("<html>");
         out.println("<body>");
+        Person person = new Person("scientist", request.getParameter("Age"), request.getParameter("Name"));
+        if (request.getSession().getAttribute("persons") == null)
+        {
+            request.getSession().setAttribute("persons", new ArrayList<Person>());
+        }
+        List<Person> persons = (List<Person>) request.getSession().getAttribute("persons");
+        persons.add(person);
+
+        request.getSession().setAttribute("persons", persons);
+        out.println("<p>Persons in session:</p>");
+        for (Person aPerson : persons)
+        {
+            out.print(String.format("<p>%s</p>", aPerson.toString()));
+        }
+
+        request.getSession().setAttribute("dd", person);
 
         displayClientInfo(request, out);
 
         displayServerInfo(out);
+        out.print("<form name=\"input\" action=\"ServletInfo\" method=\"get\">");
+        out.print("Name: <input type=\"text\" name=\"Name\"  /><br />");
+        out.print("Age:<input type = \"text\" name = \"Age\"  / ><br / >");
+        out.print("<input type = \"submit\" value = \"Submit\" / >");
+        out.print("</form >");
 
+        out.print(String.format("<p>====================</p>"));
         out.println("</body>");
         out.println("</html>");
     }
@@ -45,6 +70,7 @@ public class ExplorerServlet extends HttpServlet
         out.print(String.format("<p>web.xml resource path: %s</p>", this.getServletContext().getResource("WEB-INF/web.xml")));
         out.print(String.format("<p>foo.txt resource path: %s</p>", this.getServletContext().getResource("WEB-INF/classes/foo.txt")));
         out.print(String.format("<p>Current Thread: %s</p>", Thread.currentThread().toString()));
+        out.print(String.format("<p>====================</p>"));
     }
 
     private void displayClientInfo(HttpServletRequest request, PrintWriter out)
