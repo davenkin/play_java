@@ -17,10 +17,11 @@ public class PostExplorerFilter implements Filter
 
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException
     {
-        filterChain.doFilter(servletRequest,servletResponse);
-        PrintWriter writer = servletResponse.getWriter();
-        writer.println("<p>This is added by post explorer filter</p>");
         config.getServletContext().log(String.format("PostExplorerFilter doFilter called at %s", new Date().toString()));
+        PrintWriter writer = servletResponse.getWriter();
+        writer.println("<p>This is added </p>");
+        filterChain.doFilter(servletRequest,servletResponse);
+        writer.println("<p>This is added by post explorer filter</p>");
     }
 
     public void destroy()

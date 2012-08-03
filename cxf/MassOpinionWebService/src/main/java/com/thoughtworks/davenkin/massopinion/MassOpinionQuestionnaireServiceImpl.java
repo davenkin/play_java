@@ -1,6 +1,6 @@
 package com.thoughtworks.davenkin.massopinion;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class MassOpinionQuestionnaireServiceImpl implements MassOpinionQuestionnaireService
 {
@@ -11,8 +11,14 @@ public class MassOpinionQuestionnaireServiceImpl implements MassOpinionQuestionn
         this.massOpinionQuestionnaireDAO = massOpinionQuestionnaireDAO;
     }
 
-    public List<Questionnaire> getQuestionnaires()
+
+    public Questionnaire getQuestionnaireById(String id)
     {
-       return massOpinionQuestionnaireDAO.getQuestionnaires();
+        return massOpinionQuestionnaireDAO.getQuestionnaireById(id);
+    }
+
+    public ArrayList<Questionnaire> getQuestionnaire()
+    {
+        return massOpinionQuestionnaireDAO.getQuestionnaires();
     }
 }

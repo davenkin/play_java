@@ -72,6 +72,18 @@
           <version>${cxf.version}</version>
       </dependency>
 
+      <dependency>
+          <groupId>javax.xml.bind</groupId>
+          <artifactId>jaxb-api</artifactId>
+          <version>2.1</version>
+      </dependency>
+
+      <dependency>
+          <groupId>com.sun.xml.bind</groupId>
+          <artifactId>jaxb-impl</artifactId>
+          <version>2.1.3</version>
+      </dependency>
+
 
       <dependency>
           <groupId>org.springframework</groupId>
@@ -103,10 +115,50 @@
           <artifactId>spring-expression</artifactId>
           <version>${spring.version}</version>
       </dependency>
+      <dependency>
+          <groupId>commons-httpclient</groupId>
+          <artifactId>commons-httpclient</artifactId>
+          <scope>test</scope>
+          <version>3.1</version>
+      </dependency>
 
 
   </dependencies>
+
   <build>
     <finalName>MassOpinionWebService</finalName>
+      <plugins>
+          <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>jaxb2-maven-plugin</artifactId>
+              <executions>
+                  <execution>
+                      <phase>generate-sources</phase>
+                      <goals>
+                          <goal>xjc</goal>
+                      </goals>
+                  </execution>
+              </executions>
+              <configuration>
+                  <packageName>com.thoughtworks.davenkin.jaxb</packageName> <!-- The name of your generated source package -->
+                  <outputDirectory>${basedir}/src/main/generated-source</outputDirectory>
+              </configuration>
+          </plugin>
+          <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>build-helper-maven-plugin</artifactId>
+              <executions>
+                  <execution>
+                      <phase>generate-sources</phase>
+                      <goals><goal>add-source</goal></goals>
+                      <configuration>
+                          <sources>
+                              <source>src/main/generated-source</source>
+                          </sources>
+                      </configuration>
+                  </execution>
+              </executions>
+          </plugin>
+      </plugins>
   </build>
 </project>

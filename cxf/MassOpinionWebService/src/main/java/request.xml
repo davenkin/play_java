@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="http://suncorp.com.au/cis/privacyConsent/v1_0">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <urn:GetPrivacyConsentRequest>
+            <urn:CustomerId>12345</urn:CustomerId>
+            <urn:Brand>Smith</urn:Brand>
+        </urn:GetPrivacyConsentRequest>
+    </soapenv:Body>
+    </soapenv:Envelope>
