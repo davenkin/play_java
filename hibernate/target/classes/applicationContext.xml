@@ -43,8 +43,5 @@
         <property name="hibernateTemplate" ref="hibernateTemplate"/>
     </bean>
 
-    <!--<jdbc:initialize-database data-source="dataSource">-->
-    <!--<jdbc:script location="org/springframework/batch/core/schema-hsqldb.sql"/>-->
-    <!--</jdbc:initialize-database>-->
 
 </beans>

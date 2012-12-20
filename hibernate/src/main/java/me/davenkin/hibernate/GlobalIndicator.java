@@ -2,9 +2,9 @@ package me.davenkin.hibernate;
 
 public enum GlobalIndicator
 {
-    Y("Y"),
-    N("N"),
-    D("D");
+    Y("YES"),
+    N("NO"),
+    D("DETAIL");
 
     private String name;
 

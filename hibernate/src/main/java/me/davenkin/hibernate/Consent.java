@@ -1,12 +1,12 @@
 package me.davenkin.hibernate;
 
-import java.util.List;
+import java.util.Set;
 
 public class Consent
 {
     private Long profileId;
     private GlobalIndicator globalIndicator;
-    private List<ConsentDetail> consentDetails;
+    private Set<ConsentDetail> consentDetails;
 
     public Consent()
     {
@@ -35,12 +35,12 @@ public class Consent
     }
 
 
-    public List<ConsentDetail> getConsentDetails()
+    public Set<ConsentDetail> getConsentDetails()
     {
         return consentDetails;
     }
 
-    public void setConsentDetails(List<ConsentDetail> consentDetails)
+    public void setConsentDetails(Set<ConsentDetail> consentDetails)
     {
         this.consentDetails = consentDetails;
     }

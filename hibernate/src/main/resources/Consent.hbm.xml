@@ -3,10 +3,9 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="me.davenkin.hibernate.Consent" table="profile" catalog="testdb">
+    <class name="me.davenkin.hibernate.Consent" table="profile">
         <id name="profileId" type="java.lang.Long">
             <column name="id"/>
-            <generator class="identity"/>
         </id>
         <property name="globalIndicator">
             <column name="global_indicator"/>
@@ -15,12 +14,11 @@
             </type>
         </property>
 
-        <list name="consentDetails" table="consent"
+        <set name="consentDetails" table="consent"
               lazy="false" fetch="select">
             <key>
                 <column name="profile_id" not-null="true"/>
             </key>
-            <list-index column="id" base="1"/>
             <composite-element class="me.davenkin.hibernate.ConsentDetail">
                 <property name="channel" type="java.lang.String">
                     <column name="channel"/>
@@ -32,7 +30,7 @@
                 </type>
                 </property>
             </composite-element>
-        </list>
+        </set>
 
     </class>
 

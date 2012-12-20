@@ -2,8 +2,8 @@ package me.davenkin.hibernate;
 
 public enum ConsentIndicator
 {
-    Y("Y"),
-    N("N");
+    Y("YES"),
+    N("NO");
 
     private String name;
 
@@ -12,8 +12,4 @@ public enum ConsentIndicator
         this.name = indicator;
     }
 
-    public String getName()
-    {
-        return name;
-    }
 }
