@@ -1,8 +1,7 @@
 
-bal setup:
 
  Set up git
-  git config --global user.name "Davenkin"
+  git config --global user.name "davenkin"
   git config --global user.email davenkin@163.com
       
 
