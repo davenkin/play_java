@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="me.davenkin.hibernate.ConsentDetail" table="consent">
+        <composite-id >
+            <key-property name="profileId" column="profile_id" type="java.lang.Long" />
+            <key-many-to-one name="channel1" column="channel_code" entity-name="me.davenkin.hibernate.ConsentChannel"/>
+        </composite-id>
+        <property name="consentIndicator">
+            <column name="indicator"/>
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">me.davenkin.hibernate.ConsentIndicator</param>
+            </type>
+        </property>
+
+    </class>
+
+</hibernate-mapping>

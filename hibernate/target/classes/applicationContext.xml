@@ -34,6 +34,9 @@
         <property name="mappingResources">
             <list>
                 <value>Consent.hbm.xml</value>
+                <value>ConsentChannel.hbm.xml</value>
+                <value>ConsentDetail.hbm.xml</value>
+
             </list>
         </property>
 

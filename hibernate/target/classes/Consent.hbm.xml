@@ -14,22 +14,9 @@
             </type>
         </property>
 
-        <set name="consentDetails" table="consent"
-              lazy="false" fetch="select">
-            <key>
-                <column name="profile_id" not-null="true"/>
-            </key>
-            <composite-element class="me.davenkin.hibernate.ConsentDetail">
-                <property name="channel" type="java.lang.String">
-                    <column name="channel"/>
-                </property>
-                <property name="consentIndicator">
-                <column name="indicator"/>
-                <type name="org.hibernate.type.EnumType">
-                    <param name="enumClass">me.davenkin.hibernate.ConsentIndicator</param>
-                </type>
-                </property>
-            </composite-element>
+        <set name="consentDetails" lazy="false" fetch="select">
+            <key column="profile_id"/>
+            <one-to-many class="me.davenkin.hibernate.ConsentDetail"/>
         </set>
 
     </class>
