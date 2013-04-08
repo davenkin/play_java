@@ -4,4 +4,48 @@
 
 <web-app>
   <display-name>opinions</display-name>
+    <servlet>
+        <servlet-name>exceptionServlet</servlet-name>
+        <servlet-class>davenkin.servlet.ExceptionGeneratingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>exceptionServlet</servlet-name>
+        <url-pattern>/generateException</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>errorServlet</servlet-name>
+        <servlet-class>davenkin.servlet.ErrorCodeGeneratingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>errorServlet</servlet-name>
+        <url-pattern>/generateErrorCode</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>errorHandlingServlet</servlet-name>
+        <servlet-class>davenkin.servlet.ErrorHandlingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>errorHandlingServlet</servlet-name>
+        <url-pattern>/handleError</url-pattern>
+    </servlet-mapping>
+
+    <error-page>
+        <exception-type>java.lang.NullPointerException</exception-type>
+        <location>/handleError</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>//WEB-INF/jsp/error.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/jsp/error.html</location>
+    </error-page>
 </web-app>
