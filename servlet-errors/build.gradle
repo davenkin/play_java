@@ -1,0 +1,30 @@
+allprojects {
+
+    apply plugin: 'idea'
+}
+
+subprojects {
+    apply plugin: 'java'
+    sourceCompatibility  = 1.6
+    group = 'davenkin'
+    version = '1.0-SNAPSHOT'
+
+
+    repositories {
+        mavenCentral()
+    }
+
+    apply from: 'file:../emma.gradle'
+
+    dependencies {
+        testCompile 'junit:junit:4.8.2'
+        testCompile 'easymock:easymock:2.0'
+        compile 'org.slf4j:slf4j-log4j12:1.7.2'
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.0-milestone-9'
+    jarFile = 'wrapper/wrapper.jar'
+}
+

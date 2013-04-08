@@ -1,6 +1,7 @@
 package com.thoughtworks.davenkin;
 
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.*;
@@ -8,6 +9,7 @@ import java.util.Scanner;
 
 import static junit.framework.Assert.assertEquals;
 
+@Ignore
 public class StringManipulatorTest
 {
 

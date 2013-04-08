@@ -1,0 +1,12 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+
+    <xsd:complexType name="Animal">
+        <xsd:sequence>
+            <xsd:element name="animalName" type="xsd:string"/>
+            <xsd:element name="animalType" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+</xsd:schema>

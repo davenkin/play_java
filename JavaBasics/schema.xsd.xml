@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:ZooInfo xmlns:ns2="www.davenkin.v1">
+    <zoo>
+        <zooName>asd</zooName>
+        <zooId>123</zooId>
+        <animals>
+            <animalName>name</animalName>
+            <animalType>type</animalType>
+        </animals>
+    </zoo>
+    <city>city</city>
+</ns2:ZooInfo>
+
+
+        <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:ZooInfo xmlns:ns2="www.davenkin.v2">
+<zoo>
+    <zooName>asd</zooName>
+    <zooId>123</zooId>
+    <animals>
+        <animalName>name</animalName>
+        <animalType>type</animalType>
+    </animals>
+</zoo>
+<city>city</city>
+<country>country</country>
+</ns2:ZooInfo>
+
+
+        <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:ZooInfoV3 xmlns:ns2="www.davenkin.v3">
+<zoo>
+    <zooName>asd</zooName>
+    <zooId>123</zooId>
+    <animals>
+        <animalName>name</animalName>
+        <animalType>type</animalType>
+    </animals>
+</zoo>
+<city>city</city>
+</ns2:ZooInfoV3>
+
+
+        <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:ZooInfo xmlns:ns2="www.davenkin.v1">
+<zoo>
+    <zooName>asd</zooName>
+    <zooId>123</zooId>
+    <animals>
+        <animalName>name</animalName>
+        <animalType>type</animalType>
+    </animals>
+</zoo>
+<city>city</city>
+</ns2:ZooInfo>
+

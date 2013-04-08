@@ -1,0 +1,13 @@
+<dav:ZooInfo xmlns:dav="www.davenkin.v2">
+  <dav:zoo>
+    <dav:zooName>string</dav:zooName>
+    <dav:zooId>3</dav:zooId>
+    <!--1 or more repetitions:-->
+    <dav:animals>
+      <animalName>string</animalName>
+      <animalType>string</animalType>
+    </dav:animals>
+  </dav:zoo>
+  <dav:city>string</dav:city>
+  <dav:country>string</dav:country>
+</dav:ZooInfo>

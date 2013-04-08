@@ -1,0 +1,17 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="www.davenkin.v3"
+        xmlns:v2="www.davenkin.v2">
+    <xsd:import namespace="www.davenkin.v2" schemaLocation="zoo-v2.xsd"/>
+
+
+    <xsd:element name="ZooInfoV3">
+        <xsd:complexType>
+            <xsd:sequence>
+            <xsd:element name="zoo" type="v2:Zoo"/>
+                <xsd:element name="city" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+
+</xsd:schema>

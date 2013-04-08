@@ -1,0 +1,3 @@
+<dav:animal xmlns:dav="www.davenkin.common">
+  <name>string</name>
+</dav:animal>
